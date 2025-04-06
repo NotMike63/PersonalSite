@@ -27,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(bg--color);
+    background: var(--bg-color);
     color: var(--text-color)
 }
 
@@ -115,7 +115,7 @@ body {
   border-radius: 50%;
   font-size: 1.3rem;
   color: var(--main-color);
-  margin: 0 .2rem
+  margin: 0 .2rem;
   transition: .5s;
 }
 
@@ -167,12 +167,17 @@ body {
   position: absolute;
   right: 0;
   transform-style: preserve-3d;
+  transform-origin: left;
+}
+
+.book-page.page-right.turn {
+  transform: rotateY(-180deg);
 }
 
 .book-page .page-front,
 .book-page .page-back {
   position: absolute;
-  top 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
