@@ -20,3 +20,20 @@ pageTurnBtn.forEach((el, index) => {
         }
     }
 })
+
+// Contact Button
+const pages = document.querySelectorAll('.book-page.page-right');
+const contactMeBtn = document.querySelector('.btn.contact-me');
+
+contactMeBtn.onclick = () => {
+    pages.forEach((page, index) => {
+        setTimeout(() => {
+            page.classList.add('turn');
+
+            setTimeout(() => {
+                page.style.zIndex = 20 + index;
+            }, 500)
+        }, (index +1) * 200 + 100)
+
+    })
+}
