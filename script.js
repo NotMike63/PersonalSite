@@ -69,6 +69,7 @@ backProfileBtn.onclick = () => {
 
 // opening animation
 const coverRight = document.querySelector('.cover.cover-right');
+const pageLeft= document.querySelector('.book-page.page-left');
 
 //opening animation (cover right animation)
 setTimeout(() => {
@@ -78,6 +79,11 @@ setTimeout(() => {
 setTimeout(() => {
     coverRight.style.zIndex = -1;
 }, 2800)
+
+//opening animation (page left or profile page animation)
+setTimeout(() => {
+    pageLeft.style.zIndex = 20;
+}, 3200)
 
 //opening animation (all page right animation)
 pages.forEach((_, index) => {
